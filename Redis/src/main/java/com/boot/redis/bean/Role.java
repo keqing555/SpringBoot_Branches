@@ -5,13 +5,15 @@ import java.io.Serializable;
 public class Role implements Serializable {
     private int id;
     private String name;
+    private String weapon;
 
     public Role() {
     }
 
-    public Role(int id, String name) {
+    public Role(int id, String name, String weapon) {
         this.id = id;
         this.name = name;
+        this.weapon = weapon;
     }
 
     public int getId() {
@@ -30,11 +32,20 @@ public class Role implements Serializable {
         this.name = name;
     }
 
+    public String getWeapon() {
+        return weapon;
+    }
+
+    public void setWeapon(String weapon) {
+        this.weapon = weapon;
+    }
+
     @Override
     public String toString() {
         return "Role{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
+                ", weapon='" + weapon + '\'' +
                 '}';
     }
 }

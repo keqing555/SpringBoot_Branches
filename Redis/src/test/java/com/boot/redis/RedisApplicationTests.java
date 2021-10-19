@@ -1,5 +1,6 @@
 package com.boot.redis;
 
+import com.boot.redis.bean.Role;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -20,7 +21,8 @@ class RedisApplicationTests {
         String role = ops.get("role");
         System.out.println(role);
         //删
-        redisTemplate.delete("role");
+        //  redisTemplate.delete("role");
     }
+
 
 }
