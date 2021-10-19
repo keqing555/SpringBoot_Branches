@@ -5,14 +5,16 @@ server:
 spring:
   #配置数据源
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/genshin?characterEncoding=utf-8
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/genshin?serverTimezone=GMT%2B8&characterEncoding=UTF-8
     username: root
     password: root
 
 #下面这些内容是为了让MyBatis映射
 #指定Mybatis的Mapper文件
 mybatis:
+  #主配置文件
+  #config-location: mybatisCfg.xml
   #mapper文件路径
   mapper-locations: classpath:mappers/*.xml
   #设置别名

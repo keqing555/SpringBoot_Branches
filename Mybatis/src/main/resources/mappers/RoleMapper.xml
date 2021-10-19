@@ -3,8 +3,9 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.boot.mybatis.dao.RoleMapper">
-    <select id="getRoleByRid" resultMap="Role">
-        select rid,rname,area,age,sex,star,elemental_force
+    <!--这里是resultType而不是resultMap-->
+    <select id="getRoleByRid" resultType="role">
+        select rid, rname, area, age, sex, star, elemental_force
         from role
         where rid = #{rid}
     </select>

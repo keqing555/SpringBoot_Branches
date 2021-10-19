@@ -9,6 +9,9 @@ import org.springframework.data.redis.core.ValueOperations;
 
 @SpringBootTest
 class RedisApplicationTests {
+    /**
+     * 操作String
+     */
     @Autowired
     private RedisTemplate<String, String> redisTemplate;
 
@@ -23,6 +26,5 @@ class RedisApplicationTests {
         //删
         //  redisTemplate.delete("role");
     }
-
 
 }
